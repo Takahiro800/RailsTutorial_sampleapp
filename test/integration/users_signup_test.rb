@@ -12,4 +12,18 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'div#error_explanation'
     assert_select 'div.alert'
   end
+
+  test "valid signup information" do
+    # まず登録画面にいく
+    get signup_path
+    # メソッド内の処理の前後で　'User.count' の差異が１つであることを確認する
+    assert_difference 'User.count', 1 do
+      # 登録作業をする
+      post users_path, params: { user: { name: "Example User", email: "user@example.com",
+                                        password: "password", password_confirmation: "password"} }
+    end
+    follow_redirect!
+    assert_template 'users/show'
+    assert_not flash.empty?
+  end
 end
