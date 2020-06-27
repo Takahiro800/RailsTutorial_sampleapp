@@ -1,25 +1,14 @@
-# README
+## 新しく学んだこと
+- クライアントから送信された値（リクエスト情報）を１つにまとめて、`params[:パラメタ名]`という形式でアクセスできるようにしています。
+- Sessionsコントローラーを生成した時点でセッション用ヘルパーモジュールを作成してくれる
+- ApplicationコントローラーはRailsの全コントローラの親クラス
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## 調べること
+- アクションってどの瞬間に実行されるの？
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# RailsTutorial_sampleapp
+## 感じていること
+- 開発するときって
+	- 「どんな機能や仕様にするのか」
+	- 「いかにコードに落とし込むのか」
+の２つを意識しないといけない
